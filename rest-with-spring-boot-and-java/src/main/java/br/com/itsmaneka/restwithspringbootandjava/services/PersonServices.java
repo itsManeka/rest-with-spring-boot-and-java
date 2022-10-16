@@ -1,62 +1,55 @@
 package br.com.itsmaneka.restwithspringbootandjava.services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.itsmaneka.restwithspringbootandjava.exceptions.ResourceNotFoundException;
 import br.com.itsmaneka.restwithspringbootandjava.model.Person;
+import br.com.itsmaneka.restwithspringbootandjava.repositories.PersonRepository;
 
 @Service
 public class PersonServices {
-    private final AtomicLong counter = new AtomicLong();
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
+
+    @Autowired
+    PersonRepository repository;
 
     public List<Person> findAll() {
         logger.info("Finding all!");
-        List<Person> persons = new ArrayList<>();
-        for (int i = 0; i < 8; i++) {
-            Person person = mockPerson(i);
-            persons.add(person);
-        }
-        return persons;
+        
+        return repository.findAll();
     }
 
-    private Person mockPerson(int i) {
+    public Person findById(Long id) {
         logger.info("Finding one Person!");
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Pessoa" + i);
-        person.setLastName("Sobrenome" + i);
-        person.setAddress("Endereço" + i);
-        person.setGender("Male");
-        return person;
-    }
-
-    public Person findById(String id) {
-        logger.info("Finding one Person!");
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Maneka");
-        person.setLastName("Dias");
-        person.setAddress("Criciúma - SC - BR");
-        person.setGender("Male");
-        return person;
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Sem dados para esse ID"));
     }
 
     public Person create(Person person) {
         logger.info("Creating one Person!");
-        return person;
+        return repository.save(person);
     }
 
     public Person update(Person person) {
         logger.info("Updating one Person!");
-        return person;
+        
+        Person entity = repository.findById(person.getId()).orElseThrow(() -> new ResourceNotFoundException("Sem dados para esse ID"));
+
+        entity.setFirstName(person.getFirstName());
+        entity.setLastName(person.getLastName());
+        entity.setAddress(person.getAddress());
+        entity.setGender(person.getGender());
+
+        return repository.save(person);
     }
 
-    public void delete(String id) {
+    public void delete(Long id) {
         logger.info("deleting one Person!");
+
+        var entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Sem dados para esse ID"));
+        repository.delete(entity);
     }
 }
