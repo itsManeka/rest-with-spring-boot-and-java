@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.itsmaneka.restwithspringbootandjava.model.Person;
+import br.com.itsmaneka.restwithspringbootandjava.data.vo.v1.PersonVO;
 import br.com.itsmaneka.restwithspringbootandjava.services.PersonServices;
 
 @RestController
@@ -25,23 +25,23 @@ public class PersonController {
     private PersonServices service;
     
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<Person> findAll() {
+    public List<PersonVO> findAll() {
         return service.findAll();
     }
     
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Person findById(@PathVariable(value = "id") Long id) throws Exception {
+    public PersonVO findById(@PathVariable(value = "id") Long id) throws Exception {
         return service.findById(id);
     }
     
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Person create(@RequestBody Person person) throws Exception {
-        return service.create(person);
+    public PersonVO create(@RequestBody PersonVO PersonVO) throws Exception {
+        return service.create(PersonVO);
     }
     
     @PutMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
-    public Person update(@RequestBody Person person) throws Exception {
-        return service.update(person);
+    public PersonVO update(@RequestBody PersonVO PersonVO) throws Exception {
+        return service.update(PersonVO);
     }
     
     @DeleteMapping(value = "/{id}")
