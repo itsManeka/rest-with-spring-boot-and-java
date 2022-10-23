@@ -18,7 +18,7 @@ import br.com.itsmaneka.restwithspringbootandjava.data.vo.v1.PersonVO;
 import br.com.itsmaneka.restwithspringbootandjava.services.PersonServices;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person/v1")
 public class PersonController {
 
     @Autowired
