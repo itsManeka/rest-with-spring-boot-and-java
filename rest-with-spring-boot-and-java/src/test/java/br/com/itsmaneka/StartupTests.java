@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava;
+package br.com.itsmaneka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

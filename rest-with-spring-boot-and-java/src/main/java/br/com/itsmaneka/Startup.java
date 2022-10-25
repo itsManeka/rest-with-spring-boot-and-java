@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava;
+package br.com.itsmaneka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
