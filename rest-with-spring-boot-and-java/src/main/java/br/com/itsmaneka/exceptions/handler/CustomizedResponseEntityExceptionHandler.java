@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava.exceptions.handler;
+package br.com.itsmaneka.exceptions.handler;
 
 import java.util.Date;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.itsmaneka.restwithspringbootandjava.exceptions.ExceptionResponse;
-import br.com.itsmaneka.restwithspringbootandjava.exceptions.ResourceNotFoundException;
+import br.com.itsmaneka.exceptions.ExceptionResponse;
+import br.com.itsmaneka.exceptions.ResourceNotFoundException;
 
 @ControllerAdvice
 @RestController

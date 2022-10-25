@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava.unittests.mapper;
+package br.com.itsmaneka.unittests.mapper;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,10 +7,10 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import br.com.itsmaneka.restwithspringbootandjava.data.vo.v1.PersonVO;
-import br.com.itsmaneka.restwithspringbootandjava.mapper.DozerMapper;
-import br.com.itsmaneka.restwithspringbootandjava.model.Person;
-import br.com.itsmaneka.restwithspringbootandjava.unittests.mapper.mocks.MockPerson;
+import br.com.itsmaneka.data.vo.v1.PersonVO;
+import br.com.itsmaneka.mapper.DozerMapper;
+import br.com.itsmaneka.model.Person;
+import br.com.itsmaneka.unittests.mapper.mocks.MockPerson;
 
 public class DozerConverterTest {
     

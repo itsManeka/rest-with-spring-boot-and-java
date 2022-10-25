@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava.services;
+package br.com.itsmaneka.services;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -6,11 +6,11 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.itsmaneka.restwithspringbootandjava.data.vo.v1.PersonVO;
-import br.com.itsmaneka.restwithspringbootandjava.exceptions.ResourceNotFoundException;
-import br.com.itsmaneka.restwithspringbootandjava.mapper.DozerMapper;
-import br.com.itsmaneka.restwithspringbootandjava.model.Person;
-import br.com.itsmaneka.restwithspringbootandjava.repositories.PersonRepository;
+import br.com.itsmaneka.data.vo.v1.PersonVO;
+import br.com.itsmaneka.exceptions.ResourceNotFoundException;
+import br.com.itsmaneka.mapper.DozerMapper;
+import br.com.itsmaneka.model.Person;
+import br.com.itsmaneka.repositories.PersonRepository;
 
 @Service
 public class PersonServices {

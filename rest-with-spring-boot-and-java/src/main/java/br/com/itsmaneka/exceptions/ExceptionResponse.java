@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava.exceptions;
+package br.com.itsmaneka.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

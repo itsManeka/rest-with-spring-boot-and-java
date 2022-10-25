@@ -1,4 +1,4 @@
-package br.com.itsmaneka.restwithspringbootandjava.mapper;
+package br.com.itsmaneka.mapper;
 
 import java.util.ArrayList;
 import java.util.List;

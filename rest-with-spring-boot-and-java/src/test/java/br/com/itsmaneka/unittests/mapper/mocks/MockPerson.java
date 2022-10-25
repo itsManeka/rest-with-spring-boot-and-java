@@ -1,10 +1,10 @@
-package br.com.itsmaneka.restwithspringbootandjava.unittests.mapper.mocks;
+package br.com.itsmaneka.unittests.mapper.mocks;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.itsmaneka.restwithspringbootandjava.data.vo.v1.PersonVO;
-import br.com.itsmaneka.restwithspringbootandjava.model.Person;
+import br.com.itsmaneka.data.vo.v1.PersonVO;
+import br.com.itsmaneka.model.Person;
 
 public class MockPerson {
 
