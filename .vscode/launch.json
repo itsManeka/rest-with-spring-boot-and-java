@@ -9,6 +9,16 @@
             "projectName": "rest-with-spring-boot-and-java",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Startup<rest-with-spring-boot-and-java>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.itsmaneka.Startup",
+            "projectName": "rest-with-spring-boot-and-java",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
