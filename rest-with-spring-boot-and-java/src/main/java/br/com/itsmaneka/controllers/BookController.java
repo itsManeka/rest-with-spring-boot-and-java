@@ -52,7 +52,7 @@ public class BookController {
     }
     
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
-    @Operation(summary = "Encontra uma livro", description = "Encontra uma livro",
+    @Operation(summary = "Encontra um livro", description = "Encontra um livro",
         tags = {"Livros"},
         responses = {
             @ApiResponse(description = "Success", responseCode = "200",
@@ -70,7 +70,7 @@ public class BookController {
     
     @PostMapping(consumes = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML},
                  produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
-    @Operation(summary = "Adiciona uma nova livro", description = "Adiciona uma nova livro passando um JSON, XML ou YML",
+    @Operation(summary = "Adiciona um novo livro", description = "Adiciona um novo livro passando um JSON, XML ou YML",
         tags = {"Livros"},
         responses = {
             @ApiResponse(description = "Created", responseCode = "200",
@@ -86,7 +86,7 @@ public class BookController {
     
     @PutMapping(consumes = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML},
                 produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
-    @Operation(summary = "Atualiza uma livro", description = "Atualiza uma livro passando um JSON, XML ou YML",
+    @Operation(summary = "Atualiza um livro", description = "Atualiza um livro passando um JSON, XML ou YML",
         tags = {"Livros"},
         responses = {
             @ApiResponse(description = "Updated", responseCode = "200",
@@ -102,7 +102,7 @@ public class BookController {
     }
     
     @DeleteMapping(value = "/{id}")
-    @Operation(summary = "Deleta uma livro", description = "Deleta uma livro passando um JSON, XML ou YML",
+    @Operation(summary = "Deleta um livro", description = "Deleta um livro passando um JSON, XML ou YML",
         tags = {"Livros"},
         responses = {
             @ApiResponse(description = "No Content", responseCode = "204", content = @Content),
